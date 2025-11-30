@@ -93,6 +93,20 @@
             cursor: pointer;
         }
 
+        .column {
+            float: left;
+            width: 30%;
+            padding: 0 10px;
+        }
+
+        .row { margin: 0 -5px; }
+
+        .row::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+
         button.primary-btn:hover {
             background-color: #0b691b;
         }
@@ -125,6 +139,11 @@
             nav a {
                 display: inline-block;
                 margin-bottom: 8px;
+            }
+            .column{
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -196,11 +215,48 @@
 
                 <article id="schedule" class="card">
                     <h2>Schedule</h2>
-                    <div>
-                        <p>
-                            Day 1:
-                            
-                        </p>
+                    <div class="row">
+                        <div class="column">
+                            <div class="card" style="background-color: #222;">
+                                <h3>Day 1</h3>
+                                <p>
+                                    <b>Morning</b><br>
+                                    8:00 AM - Opening Mass<br>
+                                    9:00 AM - Cheers and Yells<br>
+                                    10:00 AM - Running Man Challenge<br>
+                                    <br>
+                                    <b>Afternoon</b><br>
+                                    1:00 PM - E-Games & Academics 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card" style="background-color: #222;">
+                                <h3>Day 2</h3>
+                                <p>
+                                    <b>Morning</b><br>
+                                    6:00 AM - 12:00 NN - Seminar<br>
+                                    <br>
+                                    <b>Afternoon</b><br>
+                                    1:00 PM - 5:00 PM - Capture the Flag Competition &#127988
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card" style="background-color: #222;">
+                                <h3>Day 3</h3>
+                                <p>
+                                    <b>Morning</b><br>
+                                    6:00 AM - Color Me Run<br>
+                                    8:00 AM - ZUMBA & Parlor Games<br>
+                                    <br>
+                                    <b>Afternoon</b><br>
+                                    2:00 PM - 8:30 PM - CCIS Nights
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </section>
