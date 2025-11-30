@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A campus event celebrating the CCIS department.">
+    <!-- Favicon using a relative file path -->
+    <link rel="icon" type="image/png" href="images/smcc-ccis-icon.png">
+    <title>SMCC CCIS Week - Campus Event</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #000000;
+            color: rgb(0, 255, 87);
+
+            background-image: 
+                linear-gradient(0deg, rgba(0,255,0,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,0,0.08) 1px, transparent 1px);
+            background-size: 40px  40px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, nav, section, article, aside, footer {
+            padding: 15px 20px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        hr{
+            border: none; 
+            border-top: 1px solid #00ff57; 
+            margin: 2px 0;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #00ff57;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .main-section {
+            flex: 3 1 250px;
+        }
+
+        .sidebar {
+            flex: 1 1 200px;
+            background-color: #0a0a0a;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background-color: #0a0a0a;
+            border-radius: 8px;
+            padding: 15px 20px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .code-block {
+            background-color: #222;
+            color: #e8e8e8;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        button.primary-btn {
+            background-color: #094914;
+            color: #ffffff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.primary-btn:hover {
+            background-color: #0b691b;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #04290a;
+            color: #fff;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #006600;
+        }
+
+        /* Responsive layout using media query */
+        @media (max-width: 600px) {
+            .card {
+                font-size: 14px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+
+    <script>
+        // Simple JavaScript interactivity for the button
+        function toggleMessage() {
+            const msg = document.getElementById("info-message");
+            if (msg.style.display === "block") {
+                msg.style.display = "none";
+            } else {
+                msg.style.display = "block";
+            }
+        }
+
+    </script>
+
+</head>
+<body id="page-root">
+    <div class="wrapper">
+
+        <!-- Semantic header with ID and class -->
+        <header id="top-header" class="section-header">
+            <h1>SMCC CCIS Week - Campus Event</h1>
+            <p>A week celebrating innovation, technology, and collaboration. &#128526;</p>
+        </header>
+
+        <hr>
+
+        <!-- Semantic navigation -->
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#locatiob">Location</a>
+            <a href="#xhtml">FAQ</a>
+            <a href="#demo">Tech Demo</a>
+        </nav>
+
+        <hr>
+
+        <!-- MAIN LAYOUT AREA -->
+        <div class="container">
+
+            <!-- Main content using section/article and divs with classes -->
+            <section class="main-section">
+
+                <!-- Layout / Div / Classes / IDs / Buttons / JS -->
+                <article id="overview" class="card">
+                    <h2>Overview</h2>
+
+                    <div class="info-box">
+                        <p>
+                            SMCC-CCIS is an annual campus event that highlights student projects, industry talks, and hands-on workshops about software development, cybersecurity, artificial intelligence, and more.
+                        </p>
+
+                        <p>
+                            Join us for a week full of learning, networking, and <strong>fun</strong> as we celebrate the power of technology in education & innovation.
+                        </p>  
+                    </div>
+                    <img src="images/ccis-banner.png" alt="ccis-banner" style="max-width: 650px; border-radius: 5%; border: 1px solid #006600;">
+
+                    <!-- Buttons using JavaScript -->
+                    <button class="primary-btn" onclick="toggleMessage()">Toggle Info Message</button>
+
+                    <p id="info-message" class="hidden-message">
+                        JavaScript is working! &#127881; You just toggled this message using a button.
+                    </p>
+                </article>
+
+                <article id="schedule" class="card">
+                    <h2>Schedule</h2>
+                    <div>
+                        <p>
+                            Day 1:
+                            
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sidebar using semantic aside -->
+            <aside class="sidebar">
+                <h3>Quick Info Panel</h3>
+                <p>
+                    This <code>&lt;aside&gt;</code> acts as a sidebar. It demonstrates
+                    how semantic tags improve layout and meaning.
+                </p>
+                <p>
+                    This page follows a simple <strong>style guide</strong>:
+                    lowercase tag names, consistent indentation, semantic elements,
+                    meaningful class and ID names, and UTF-8 charset.
+                </p>
+                <p>
+                    Character encoding is defined using:
+                </p>
+                <div class="code-block">
+                    <code>&lt;meta charset="UTF-8"&gt;</code>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Semantic footer with entities and symbols -->
+        <footer>
+            <p>
+                Built with advanced HTML concepts &middot; InfoHub Sample &nbsp;&starf; &nbsp; &copy; 2025
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
