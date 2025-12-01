@@ -177,8 +177,8 @@
         <nav>
             <a href="#overview">Overview</a>
             <a href="#schedule">Schedule</a>
-            <a href="#locatiob">Location</a>
-            <a href="#xhtml">FAQ</a>
+            <a href="#location">Location</a>
+            <a href="#faq">FAQ</a>
             <a href="#demo">Tech Demo</a>
         </nav>
 
@@ -192,7 +192,7 @@
 
                 <!-- Layout / Div / Classes / IDs / Buttons / JS -->
                 <article id="overview" class="card">
-                    <h2>Overview</h2>
+                    <h2>&#10004 Overview</h2>
 
                     <div class="info-box">
                         <p>
@@ -203,18 +203,11 @@
                             Join us for a week full of learning, networking, and <strong>fun</strong> as we celebrate the power of technology in education & innovation.
                         </p>  
                     </div>
-                    <img src="images/ccis-banner.png" alt="ccis-banner" style="max-width: 650px; border-radius: 5%; border: 1px solid #006600;">
-
-                    <!-- Buttons using JavaScript -->
-                    <button class="primary-btn" onclick="toggleMessage()">Toggle Info Message</button>
-
-                    <p id="info-message" class="hidden-message">
-                        JavaScript is working! &#127881; You just toggled this message using a button.
-                    </p>
+                    <img src="images/ccis-banner.png" alt="ccis-banner" style="max-width: 100%; border-radius: 5%; border: 1px solid #006600;">
                 </article>
 
                 <article id="schedule" class="card">
-                    <h2>Schedule</h2>
+                    <h2>&#128197 Schedule</h2>
                     <div class="row">
                         <div class="column">
                             <div class="card" style="background-color: #222;">
@@ -259,7 +252,48 @@
                         </div>
                     </div>
                 </article>
+
+                <article id="location" class="card">
+                    <h2>&#127979 Event Location & Map</h2>
+
+                    <p>
+                        All events will be held at the Saint Michael College of Caraga Main Campus - IT Building. Use the embedded map below to find the location.
+                    </p>
+
+                    <div class="container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.4117337889252!2d125.33912029882613!3d8.988386308320178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1764558674366!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </article>
+
+                <article id="faq" class="card">
+                    <h2>&#10071 Frequently Asked Questions (FAQ)</h2>
+                    <p>Use button below to toggle FAQ.</p>
+
+                    <!-- Buttons using JavaScript -->
+                    <button class="primary-btn" onclick="toggleMessage()">Toggle FAQ Visibility</button>
+
+                    <p id="info-message" class="hidden-message">
+                        <b style="color:#0dcc4c">1. Is the event open to all students?</b><br><br>
+                        Yes, the event is open to all department and year levels. <br><br>
+
+                        <b style="color:#0dcc4c">2. Do I need to register?</b><br><br>
+                        Registration is required for competitions and workshops. <br><br>
+
+                        <b style="color:#0dcc4c">3. Is there a registration fee?</b><br><br>
+                        No, all SMCC-CCIS Week 2025 activities are free of charge. Have fun! &#127881 
+                    </p>
+                </article>
+
+                <article id="demo" class="card">
+                    <h2>&#128187 Tech Demo and Developer Notes</h2>
+                    <h3>Sample Command</h3>
+                    <div class="code-block">
+                        
+                    </div>
+                </article>
             </section>
+
+            
 
             <!-- Sidebar using semantic aside -->
             <aside class="sidebar">
@@ -283,10 +317,10 @@
 
         </div>
 
-        <!-- Semantic footer with entities and symbols -->
+        <!-- Semantic footer with entities -->
         <footer>
             <p>
-                Built with advanced HTML concepts &middot; InfoHub Sample &nbsp;&starf; &nbsp; &copy; 2025
+                SMCC CCIS Week 2025 - Campus Event Showcase &middot; Made with HTML, CSS, &amp; Javascript. &copy; 2025
             </p>
         </footer>
 
