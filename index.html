@@ -54,6 +54,7 @@
             flex-wrap: wrap;
             padding: 20px;
             gap: 20px;
+            min-width: 0;
         }
 
         .main-section {
@@ -93,19 +94,32 @@
             cursor: pointer;
         }
 
+        /* Inner cards */
+
         .column {
-            float: left;
+            float: none;
             width: 30%;
             padding: 0 10px;
+            flex: 1;
+            display: flex;
         }
 
-        .row { margin: 0 -5px; }
+        .column .card{
+            flex: 1;
+        }
+
+        .row { 
+            display: flex;
+            margin: 0 -5px; 
+        }
 
         .row::after{
             content:"";
             display: table;
             clear: both;
         }
+
+        /* ------ */
 
         button.primary-btn:hover {
             background-color: #0b691b;
@@ -140,10 +154,9 @@
                 display: inline-block;
                 margin-bottom: 8px;
             }
+            
             .column{
-                width: 100%;
-                display: block;
-                margin-bottom: 10px;
+                flex: 1 1 100%;
             }
         }
     </style>
@@ -288,31 +301,67 @@
                     <h2>&#128187 Tech Demo and Developer Notes</h2>
                     <h3>Sample Command</h3>
                     <div class="code-block">
-                        
+                        <pre><code>
+                            // Clone the SMCC-CCIS Week repository
+                            git clone https://github.com/register/ccisweek2025.git
+
+                            // Install dependences
+                            npw install
+
+                            // Start development server
+                            npm run dev
+                        </code></pre>
                     </div>
+                    <p>
+                        To save your changes, press <kbd>Ctrl</kbd> + <kbd>S</kbd>. The output should result in <samp>Build successful. No errors found.</samp>
+                    </p>
+
+                    <h2>Registration Url Example</h2>
+                    <div class="code-block">
+                        <code>https://myschool.edu/events/register?event=IT%20Week%202025&section=A</code>
+                    </div>
+                    <p>The %20 indicates a space here and is read as such so it doesn't break the structure.</p>
+
+                    <h2>HTML vs XHTML Example</h2>
+                    <p>Below is a comparison between HTML and XHTML syntax.</p>
+
+                    <div class="code-block">
+                        <code>
+                            &lt;!-- HTML Version is NOT self closed --&gt;<br>
+                            &lt;br&gt;<br>
+                            &lt;img src="images/logo.png" alt="Event Logo"&gt;<br><br>
+
+                            &lt;!-- XHTML Version is self closed, lowercase, quoted attributes --&gt;<br>
+                            &lt;br /&gt;<br>
+                            &lt;img src="images/logo.png" alt="Event Logo" /&gt;<br>
+                        </code>
+                    </div>
+                    <p>The %20 indicates a space here and is read as such so it doesn't break the structure.</p>
                 </article>
             </section>
 
-            
-
             <!-- Sidebar using semantic aside -->
             <aside class="sidebar">
-                <h3>Quick Info Panel</h3>
+                <h3>Event Info and Contact</h3>
                 <p>
-                    This <code>&lt;aside&gt;</code> acts as a sidebar. It demonstrates
-                    how semantic tags improve layout and meaning.
+                    SMCC-CCIS Week 2025 is organized by the College of Computing &amp; Information Sciences.
                 </p>
                 <p>
-                    This page follows a simple <strong>style guide</strong>:
-                    lowercase tag names, consistent indentation, semantic elements,
-                    meaningful class and ID names, and UTF-8 charset.
+                    For inquiries email: <a href="index.html">ccis@smccnasipit.edu.ph</a>
                 </p>
+                <hr>
                 <p>
-                    Character encoding is defined using:
+                    <b>Character Encoding</b><br><br>
+
+                    This page uses UTF-8 encoding, defined as:
                 </p>
                 <div class="code-block">
                     <code>&lt;meta charset="UTF-8"&gt;</code>
                 </div>
+                <p>
+                    Special characters and entites. &copy; 2025 SMCC-CCIS Week. All rights reserved.
+                </p>
+                
             </aside>
 
         </div>
